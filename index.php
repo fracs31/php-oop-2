@@ -71,23 +71,31 @@ $kennelObj = new Game($kennel["img"], $kennel["name"], $kennel["price"], $kennel
                         <!-- Testa della carta -->
                         <div class="card__head">
                             <!-- Immagine -->
-                            <img class="card__img" src="https://d2j6dbq0eux0bg.cloudfront.net/images/33879006/2965644321.jpg" alt="">
+                            <img class="card__img" src="<?= $foodObj->getImg() ?>" alt="">
                         </div>
                         <!-- Corpo della carta -->
                         <div class="card__body">
                             <!-- Titolo -->
                             <h2 class="card__title">
-                                Crocchette
+                                <?= $foodObj->getName() ?>
                                 <!-- Icona -->
-                                <span class="icon"><i class="fa-solid fa-dog"></i></span>
+                                <span class="icon">
+                                    <?php
+                                    if ($foodObj->getCategory() == "Dog") {
+                                        echo "<i class=\"fa-solid fa-dog\"></i>";
+                                    } else if ($foodObj->getCategory() == "Cat") {
+                                        echo "<i class=\"fa-solid fa-cat\"></i>";
+                                    }
+                                    ?>
+                                </span>
                             </h2>
                             <!-- Prezzo -->
                             <h3 class="card__price">
-                                9.99€
+                                <?= $foodObj->getPrice() ?>€
                             </h3>
                             <!-- Tipologia -->
                             <h4 class="card__type">
-                                Cibo
+                                <?= get_class($foodObj) ?>
                             </h4>
                         </div>
                     </div>

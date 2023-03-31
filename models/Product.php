@@ -22,7 +22,7 @@ class Product {
     }
     //Metodo che ritorna il prezzo del prodotto
     public function getPrice() {
-        return $this->img; //restituisco il prezzo
+        return $this->price; //restituisco il prezzo
     }
     //Metodo che ritorna la categoria del prodotto
     public function getCategory() {
