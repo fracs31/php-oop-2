@@ -1,4 +1,5 @@
 <?php
+require_once __DIR__ . "/Product.php"; //richiedo la classe Product
 //Classe "Cibo"
 class Food extends Product {
     private $grams; //grammi
