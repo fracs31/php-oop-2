@@ -3,15 +3,15 @@ require_once __DIR__ . "/Product.php"; //richiedo la classe Product
 //Classe "Gioco"
 class Game extends Product {
     private $material; //materiale
-    private $weigth; //peso
+    private $weight; //peso
     private $heigth; //altezza
     private $width; //larghezza
     private $depth; //profondità
     //Metodo costruttore
-    public function __construct($_img, $_name, $_price, $_category, $_material, $_weigth, $_heigth, $_width, $_depth) {
+    public function __construct($_img, $_name, $_price, $_category, $_material, $_weight, $_heigth, $_width, $_depth) {
         parent::__construct($_img, $_name, $_price, $_category); //metodo costruttore del genitore
         $this->material = $_material; //materiale
-        $this->weight = $_weigth; //peso
+        $this->weight = $_weight; //peso
         $this->heigth = $_heigth; //altezza
         $this->width = $_width; //larghezza
         $this->depth = $_depth; //profondità
@@ -21,8 +21,8 @@ class Game extends Product {
         return $this->material; //restituisco il materiale
     }
     //Metodo che restituisce il peso del gioco
-    public function getWeigth() {
-        return $this->weigth; //restituisco il peso
+    public function getweight() {
+        return $this->weight; //restituisco il peso
     }
     //Metodo che restituisce l'altezza del gioco
     public function getHeight() {
@@ -41,8 +41,8 @@ class Game extends Product {
         $this->material = $_material; //imposto il materiale
     }
     //Metodo per impostare il peso del gioco
-    public function setWeigth($_weigth) {
-        $this->weigth = $_weigth; //imposto il peso
+    public function setweight($_weight) {
+        $this->weight = $_weight; //imposto il peso
     }
     //Metodo per impostare l'altezza del gioco
     public function setHeigth($_heigth) {

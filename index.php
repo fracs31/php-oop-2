@@ -17,13 +17,13 @@ $food = [
 ];
 //Gioco
 $game = [
-    "img" => "https://www.bauzaar.it/media/catalog/product/g/i/gioco-mouse-topo-in-peluche-longhair-pad-5-cm_1.png?width=700&height=700&store=default&image-type=image",
+    "img" => "https://www.bauzaar.it/media/catalog/product/g/i/gioco-mouse-topo-in-peluche-longhair-pad-5-cm_1.png?width=700&heigth=700&store=default&image-type=image",
     "name" => "Topo",
     "price" => 19.99,
     "category" => "Cat",
     "material" => "Cotton",
     "weight" => 300,
-    "height" => 30,
+    "heigth" => 30,
     "width" => 70,
     "depth" => 50
 ];
@@ -36,15 +36,13 @@ $kennel = [
     "material" => "Plastic",
     "color" => "grey",
     "weight" => 1100,
-    "height" => 95,
+    "heigth" => 95,
     "width" => 99,
     "depth" => 99
 ];
-
 $foodObj = new Food($food["img"], $food["name"], $food["price"], $food["category"], $food["grams"], $food["kcal"], $food["fat"], $food["carbo"], $food["protein"]); //istanza di Food
-$gameObj = new Game($game["img"], $game["name"], $game["price"], $game["category"], $game["material"], $game["weigth"], $game["heigth"], $game["width"], $game["depth"]); //istanza di Game
-$kennelObj = new Game($kennel["img"], $kennel["name"], $kennel["price"], $kennel["category"], $kennel["material"], $kennel["color"], $kennel["weigth"], $kennel["heigth"], $kennel["width"], $game["depth"]); //istanza di Game
-
+$gameObj = new Game($game["img"], $game["name"], $game["price"], $game["category"], $game["material"], $game["weight"], $game["heigth"], $game["width"], $game["depth"]); //istanza di Game
+$kennelObj = new Game($kennel["img"], $kennel["name"], $kennel["price"], $kennel["category"], $kennel["material"], $kennel["color"], $kennel["weight"], $kennel["heigth"], $kennel["width"], $game["depth"]); //istanza di Kennel
 ?>
 <!DOCTYPE html>
 <html>

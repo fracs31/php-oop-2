@@ -4,16 +4,16 @@ require_once __DIR__ . "/Product.php"; //richiedo la classe Product
 class Kennel extends Product {
     private $material; //materiale
     private $color; //colore
-    private $weigth; //peso
+    private $weight; //peso
     private $heigth; //altezza
     private $width; //larghezza
     private $depth; //profondità
     //Metodo costruttore
-    public function __construct($_img, $_name, $_price, $_category, $_material, $_color, $_weigth, $_heigth, $_width, $_depth) {
+    public function __construct($_img, $_name, $_price, $_category, $_material, $_color, $_weight, $_heigth, $_width, $_depth) {
         parent::__construct($_img, $_name, $_price, $_category); //metodo costruttore del genitore
         $this->material = $_material; //materiale
         $this->color = $_color; //colore
-        $this->weight = $_weigth; //peso
+        $this->weight = $_weight; //peso
         $this->heigth = $_heigth; //altezza
         $this->width = $_width; //larghezza
         $this->depth = $_depth; //profondità
@@ -27,8 +27,8 @@ class Kennel extends Product {
         return $this->color; //restituisco il colore
     }
     //Metodo che restituisce il peso della cuccia
-    public function getWeigth() {
-        return $this->weigth; //restituisco il peso
+    public function getweight() {
+        return $this->weight; //restituisco il peso
     }
     //Metodo che restituisce l'altezza della cuccia
     public function getHeight() {
@@ -51,8 +51,8 @@ class Kennel extends Product {
         $this->color = $_color; //imposto il colore
     }
     //Metodo per impostare il peso della cuccia
-    public function setWeigth($_weigth) {
-        $this->weigth = $_weigth; //imposto il peso
+    public function setweight($_weight) {
+        $this->weight = $_weight; //imposto il peso
     }
     //Metodo per impostare l'altezza della cuccia
     public function setHeigth($_heigth) {
