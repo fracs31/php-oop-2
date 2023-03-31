@@ -33,15 +33,17 @@ $kennel = [
     "name" => "Cuccia",
     "price" => 99.99,
     "category" => "Dog",
-    "color" => "grey",
     "material" => "Plastic",
+    "color" => "grey",
     "weight" => 1100,
     "height" => 95,
     "width" => 99,
     "depth" => 99
 ];
 
-$foodObj = new Food($food["img"], $food["name"], $food["price"], $food["category"], $food["grams"], $food["kcal"], $food["fat"], $food["carbo"], $food["protein"]);
+$foodObj = new Food($food["img"], $food["name"], $food["price"], $food["category"], $food["grams"], $food["kcal"], $food["fat"], $food["carbo"], $food["protein"]); //istanza di Food
+$gameObj = new Game($game["img"], $game["name"], $game["price"], $game["category"], $game["material"], $game["weigth"], $game["heigth"], $game["width"], $game["depth"]); //istanza di Game
+$kennelObj = new Game($kennel["img"], $kennel["name"], $kennel["price"], $kennel["category"], $kennel["material"], $kennel["color"], $kennel["weigth"], $kennel["heigth"], $kennel["width"], $game["depth"]); //istanza di Game
 
 ?>
 <!DOCTYPE html>
