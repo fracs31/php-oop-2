@@ -10,11 +10,11 @@ class Food extends Product {
     //Metodo costruttore
     public function __construct($_img, $_name, $_price, $_category, $_grams, $_kcal, $_fat, $_carbo, $_protein) {
         parent::__construct($_img, $_name, $_price, $_category); //metodo costruttore del genitore
-        $this->$grams = $_grams; //grammi
-        $this->$kcal = $_kcal; //chilocalorie
-        $this->$fat = $_fat; //grassi
-        $this->$carbo = $_carbo; //carboidrati
-        $this->$protein = $_protein; //proteine
+        $this->grams = $_grams; //grammi
+        $this->kcal = $_kcal; //chilocalorie
+        $this->fat = $_fat; //grassi
+        $this->carbo = $_carbo; //carboidrati
+        $this->protein = $_protein; //proteine
     }
     //Metodo che restituisce i grammi del cibo
     public function getGrams() {
