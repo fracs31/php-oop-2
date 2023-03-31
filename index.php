@@ -42,7 +42,7 @@ $kennel = [
 ];
 $foodObj = new Food($food["img"], $food["name"], $food["price"], $food["category"], $food["grams"], $food["kcal"], $food["fat"], $food["carbo"], $food["protein"]); //istanza di Food
 $gameObj = new Game($game["img"], $game["name"], $game["price"], $game["category"], $game["material"], $game["weight"], $game["heigth"], $game["width"], $game["depth"]); //istanza di Game
-$kennelObj = new Game($kennel["img"], $kennel["name"], $kennel["price"], $kennel["category"], $kennel["material"], $kennel["color"], $kennel["weight"], $kennel["heigth"], $kennel["width"], $game["depth"]); //istanza di Kennel
+$kennelObj = new Kennel($kennel["img"], $kennel["name"], $kennel["price"], $kennel["category"], $kennel["material"], $kennel["color"], $kennel["weight"], $kennel["heigth"], $kennel["width"], $game["depth"]); //istanza di Kennel
 ?>
 <!DOCTYPE html>
 <html>
@@ -71,7 +71,7 @@ $kennelObj = new Game($kennel["img"], $kennel["name"], $kennel["price"], $kennel
                         <!-- Testa della carta -->
                         <div class="card__head">
                             <!-- Immagine -->
-                            <img class="card__img" src="<?= $foodObj->getImg() ?>" alt="">
+                            <img class="card__img" src="<?= $foodObj->getImg() ?>" alt="<?= $foodObj->getName() ?>">
                         </div>
                         <!-- Corpo della carta -->
                         <div class="card__body">
@@ -96,6 +96,78 @@ $kennelObj = new Game($kennel["img"], $kennel["name"], $kennel["price"], $kennel
                             <!-- Tipologia -->
                             <h4 class="card__type">
                                 <?= get_class($foodObj) ?>
+                            </h4>
+                        </div>
+                    </div>
+                </li>
+                <!-- Elemento della lista -->
+                <li class="list-item">
+                    <!-- Carta -->
+                    <div class="card">
+                        <!-- Testa della carta -->
+                        <div class="card__head">
+                            <!-- Immagine -->
+                            <img class="card__img" src="<?= $gameObj->getImg() ?>" alt="<?= $gameObj->getName() ?>">
+                        </div>
+                        <!-- Corpo della carta -->
+                        <div class="card__body">
+                            <!-- Titolo -->
+                            <h2 class="card__title">
+                                <?= $gameObj->getName() ?>
+                                <!-- Icona -->
+                                <span class="icon">
+                                    <?php
+                                    if ($gameObj->getCategory() == "Dog") {
+                                        echo "<i class=\"fa-solid fa-dog\"></i>";
+                                    } else if ($gameObj->getCategory() == "Cat") {
+                                        echo "<i class=\"fa-solid fa-cat\"></i>";
+                                    }
+                                    ?>
+                                </span>
+                            </h2>
+                            <!-- Prezzo -->
+                            <h3 class="card__price">
+                                <?= $gameObj->getPrice() ?>€
+                            </h3>
+                            <!-- Tipologia -->
+                            <h4 class="card__type">
+                                <?= get_class($gameObj) ?>
+                            </h4>
+                        </div>
+                    </div>
+                </li>
+                <!-- Elemento della lista -->
+                <li class="list-item">
+                    <!-- Carta -->
+                    <div class="card">
+                        <!-- Testa della carta -->
+                        <div class="card__head">
+                            <!-- Immagine -->
+                            <img class="card__img" src="<?= $kennelObj->getImg() ?>" alt="<?= $kennelObj->getName() ?>">
+                        </div>
+                        <!-- Corpo della carta -->
+                        <div class="card__body">
+                            <!-- Titolo -->
+                            <h2 class="card__title">
+                                <?= $kennelObj->getName() ?>
+                                <!-- Icona -->
+                                <span class="icon">
+                                    <?php
+                                    if ($kennelObj->getCategory() == "Dog") {
+                                        echo "<i class=\"fa-solid fa-dog\"></i>";
+                                    } else if ($kennelObj->getCategory() == "Cat") {
+                                        echo "<i class=\"fa-solid fa-cat\"></i>";
+                                    }
+                                    ?>
+                                </span>
+                            </h2>
+                            <!-- Prezzo -->
+                            <h3 class="card__price">
+                                <?= $kennelObj->getPrice() ?>€
+                            </h3>
+                            <!-- Tipologia -->
+                            <h4 class="card__type">
+                                <?= get_class($kennelObj) ?>
                             </h4>
                         </div>
                     </div>
