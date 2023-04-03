@@ -1,6 +1,8 @@
 <?php
+require_once __DIR__ . "/../traits/Validator.php"; //richiedo il trait Validator
 //Classe "Prodotto"
 class Product {
+    use Validator; //trait Validator
     protected $img; //immagine
     protected $name; //nome
     protected $price; //prezzo
@@ -10,6 +12,7 @@ class Product {
         $this->img = $_img; //immagine
         $this->name = $_name; //nome
         $this->price = $_price; //prezzo
+        $this->checkAnimal($_category); //controllo l'animale inserito
         $this->category = $_category; //categoria
     }
     //Metodo che ritorna l'immagine del prodotto
